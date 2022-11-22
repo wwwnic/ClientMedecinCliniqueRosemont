@@ -1,0 +1,25 @@
+
+<div>
+    <div *ngFor="let prescription of prescriptions">
+        <div class="card">
+            <div class="card-header">
+                <h2>Prescription</h2>
+            </div>
+            <div class="card-body">
+                <div>
+                    <h3>Prescription</h3>
+                    <p>{{prescription.description}}</p>
+                </div>
+                <div>
+                    <h3>Note</h3>
+                    <p>{{prescription.notes}}</p>
+                </div>
+                <div>
+                    <h3>Reference</h3>
+                    <p>{{prescription.references}}</p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+</div>

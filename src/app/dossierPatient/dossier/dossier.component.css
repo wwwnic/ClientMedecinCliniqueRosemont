@@ -1,0 +1,14 @@
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container div {
+    width: 100%;
+    padding: 5px;
+  }
