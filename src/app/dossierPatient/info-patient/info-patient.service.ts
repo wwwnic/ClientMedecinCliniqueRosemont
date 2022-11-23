@@ -13,7 +13,7 @@ export class InfoPatientService {
         return this.http.get<IinfoPatient[]>('http://localhost:7002/Patient/GetAll', { observe: 'response' });
     }
 
-    getById(id:number): Observable<HttpResponse<IinfoPatient[]>> {
-        return this.http.get<IinfoPatient[]>('http://localhost:7002/Patient/GetById?id='+id.toString(), { observe: 'response' });
+    getById(id:number): Observable<HttpResponse<IinfoPatient>> {
+        return this.http.get<IinfoPatient>('http://localhost:7002/Patient/GetById?id='+id.toString(), { observe: 'response' });
     }
 }

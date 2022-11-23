@@ -11,14 +11,14 @@ export interface IinfoPatient {
 
 export class infoPatient implements IinfoPatient {
     constructor(
-        public id: number,
-        public nom: string,
-        public prenom: string,
-        public email: string,
-        public ddn: string,
-        public age: string,
-        public sexe: string,
-        public allergies: string
+        public id?: number,
+        public nom?: string,
+        public prenom?: string,
+        public email?: string,
+        public ddn?: string,
+        public age?: string,
+        public sexe?: string,
+        public allergies?: string
     ){}
 }
 

@@ -10,20 +10,15 @@ import { InfoPatientService } from './info-patient.service';
   styleUrls: ['./info-patient.component.css']
 })
 export class InfoPatientComponent implements OnInit  {
-
-  infoPatient: IinfoPatient = new infoPatient(0,"","","","","","","");
-
-  infoPatientArray: IinfoPatient[] = [];
+  infoPatient: IinfoPatient = new infoPatient();
 
   constructor( protected infoPatientService: InfoPatientService) {
   }
 
-
   ngOnInit(): void {
     this.infoPatientService.getById(1)
-    .subscribe((res: HttpResponse<IinfoPatient[]>) => {
-      this.infoPatient = res.body as unknown as infoPatient;
+    .subscribe((res: HttpResponse<IinfoPatient>) => {
+      this.infoPatient = res.body ?? new infoPatient();
     });
-    this.infoPatient = this.infoPatientArray[0];
   }
 }

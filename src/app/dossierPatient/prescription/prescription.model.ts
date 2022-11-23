@@ -9,11 +9,11 @@ export interface IPrescription {
 
 export class Prescription implements IPrescription {
     constructor(
-        public id: number,
-        public id_medecin: number,
-        public id_patient: number,
-        public description: string,
-        public notes: string,
-        public references: string
+        public id?: number,
+        public id_medecin?: number,
+        public id_patient?: number,
+        public description?: string,
+        public notes?: string,
+        public references?: string
     ){}
 }
