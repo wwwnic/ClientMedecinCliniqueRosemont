@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { PrescriptionComponent } from './dossierPatient/prescription/prescription.component';
 import { InfoPatientComponent } from './dossierPatient/info-patient/info-patient.component';
 import { DossierComponent } from './dossierPatient/dossier/dossier.component';
+import { RechercherDossierComponent } from './rechercher-dossier/rechercher-dossier.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DossierComponent } from './dossierPatient/dossier/dossier.component';
     LoginComponent,
     PrescriptionComponent,
     InfoPatientComponent,
-    DossierComponent
+    DossierComponent,
+    RechercherDossierComponent
   ],
   imports: [
     BrowserModule,

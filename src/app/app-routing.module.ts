@@ -4,6 +4,7 @@ import { InfoPatientComponent } from './dossierPatient/info-patient/info-patient
 import { LoginComponent } from './login/login.component';
 import { PrescriptionComponent } from './dossierPatient/prescription/prescription.component';
 import { DossierComponent } from './dossierPatient/dossier/dossier.component';
+import { RechercherDossierComponent } from './rechercher-dossier/rechercher-dossier.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'prescription', component: PrescriptionComponent },
   { path: 'information', component: InfoPatientComponent },
   { path: 'dossier', component: DossierComponent },
+  { path: 'rechercherDossier', component: RechercherDossierComponent },
   { path: 'user', children: [
   { path: 'profil', component: LoginComponent },
   ] },
