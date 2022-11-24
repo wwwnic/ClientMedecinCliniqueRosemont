@@ -10,6 +10,6 @@ export class RechercherDossierService {
     constructor(private http: HttpClient) { }
 
     getByPatientId(id:string): Observable<HttpResponse<IinfoPatient[]>> {
-        return this.http.get<IinfoPatient[]>('http://localhost:7002/Patient/GetAll', { observe: 'response' });
+        return this.http.get<IinfoPatient[]>(`http://localhost:7002/Patient/Search?searchString=${id}`, { observe: 'response' });
     }
 }
