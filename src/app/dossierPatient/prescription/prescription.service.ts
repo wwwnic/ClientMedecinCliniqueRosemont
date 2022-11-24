@@ -14,6 +14,6 @@ export class PrescriptionService {
     }
 
     getByPatientId(id:number): Observable<HttpResponse<IPrescription[]>> {
-        return this.http.get<IPrescription[]>('http://localhost:7002/Prescription/GetByPatientId?id='+id.toString(), { observe: 'response' });
+        return this.http.get<IPrescription[]>(`http://localhost:7002/Prescription/GetByPatientId?id=${id}`, { observe: 'response' });
     }
 }

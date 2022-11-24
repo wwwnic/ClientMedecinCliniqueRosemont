@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'prescription', component: PrescriptionComponent },
   { path: 'information', component: InfoPatientComponent },
-  { path: 'dossier', component: DossierComponent },
+  { path: 'dossier/:id', component: DossierComponent },
   { path: 'rechercherDossier', component: RechercherDossierComponent },
   { path: 'user', children: [
   { path: 'profil', component: LoginComponent },

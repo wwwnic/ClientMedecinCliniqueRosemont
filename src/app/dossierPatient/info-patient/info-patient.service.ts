@@ -14,6 +14,6 @@ export class InfoPatientService {
     }
 
     getById(id:number): Observable<HttpResponse<IinfoPatient>> {
-        return this.http.get<IinfoPatient>('http://localhost:7002/Patient/GetById?id='+id.toString(), { observe: 'response' });
+        return this.http.get<IinfoPatient>(`http://localhost:7002/Patient/GetById?id=${id}`, { observe: 'response' });
     }
 }

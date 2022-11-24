@@ -1,5 +1,5 @@
 export interface IinfoPatient {
-    id?: number,
+    id: number,
     nom?: string,
     prenom?: string,
     email?: string,
@@ -11,7 +11,7 @@ export interface IinfoPatient {
 
 export class infoPatient implements IinfoPatient {
     constructor(
-        public id?: number,
+        public id: number,
         public nom?: string,
         public prenom?: string,
         public email?: string,

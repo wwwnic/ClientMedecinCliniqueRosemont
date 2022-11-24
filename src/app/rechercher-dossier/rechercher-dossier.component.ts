@@ -2,8 +2,9 @@ import { IinfoPatient } from "./rechercher-dossier.model";
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { RechercherDossierService } from './rechercher-dossier.service';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
-  
 @Component({
   selector: 'app-rechercher-dossier',
   templateUrl: './rechercher-dossier.component.html',
@@ -11,17 +12,21 @@ import { RechercherDossierService } from './rechercher-dossier.service';
 })
 export class RechercherDossierComponent {
 
-  patients: IinfoPatient[] = [];
-  recherche: string = ""
+  patients: IinfoPatient[] = []
+  rechercheInput: string = ""
+  rechercheform = new FormControl('')
 
-
-  constructor( protected rechercherService: RechercherDossierService) {}
+  constructor(protected router: Router, protected rechercherService: RechercherDossierService) {}
 
   rechercher(): void {
-    this.rechercherService.getByPatientId(this.recherche)
+    this.rechercherService.getByPatientId(this.rechercheInput)
     .subscribe((res: HttpResponse<IinfoPatient[]>) => {
-      this.patients = res.body ?? [];
+      this.patients = res.body ?? []
     });
   }
+
+ naviguerAuDossier(id:number): void {
+  this.router.navigate(['/dossier', id],)
+}
 
 }

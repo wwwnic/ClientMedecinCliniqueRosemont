@@ -5,45 +5,42 @@
 <div class="column"></div>
         <div class="column">
             <div class="ybumpbox"></div>
-            <form action="" type="post" click="rechercher()">
-                <div class="form-group row">
-                    <label for="username" class="col-4 col-form-label">Rechercher dossier</label>
-                    <div class="col-8">
-                        <input id="recherche" name="recherche" type="recherche" class="form-control" required="required" ng-model="recherche"
-                        >
-                    </div>
+            <div class="form-group row">
+                <label for="recherche" class="col-4 col-form-label">Rechercher dossier</label>
+                <div class="col-8">
+                    <input id="recherche" [(ngModel)]="rechercheInput" name="recherche" type="recherche" class="form-control" required="required" [formControl]="rechercheform">
+                </div>>
+            </div>
+            <br/>
+            <div class="form-group row">
+                <div class="offset-4 col-8">
+                    <button type="button" (click)="rechercher()">Update Name</button>
                 </div>
-                <br/>
-                <div class="form-group row">
-                    <div class="offset-4 col-8">
-                        <button name="submit" type="submit" class="btn btn-primary">Rechercher</button>
-                    </div>
-                </div>
-            </form>
+            </div>
+            <br/>
         </div>
         <div class="column"></div>
     </div>
-    <div *ngFor="let patient of patients">
-        <div class="card">
-            <div class="card-header">
-                <h2>Prescription</h2>
-            </div>
-            <div class="card-body">
-                <div>
-                    <h3>Prescription</h3>
-                    <p>{{patient.id}}</p>
+    <br /><br /><br /><br /><br />
+    <div class="row">
+        <div class="column"></div>
+        <div class="column">
+            <div *ngFor="let patient of patients">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>{{patient.prenom}} {{patient.nom}} ({{patient.id}})</h2>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3>Date de naissance: {{patient.ddn}} ({{patient.age}})</h3>
+                        </div>
+                        <button type="button" (click)="naviguerAuDossier(patient.id)">Update Name</button>
+                    </div>
                 </div>
-                <div>
-                    <h3>Note</h3>
-                    <p>{{patient.prenom}} {{patient.nom}}</p>
-                </div>
-                <div>
-                    <h3>Reference</h3>
-                    <p>{{patient.ddn}} ({{patient.age}})</p>
-                </div>
+                <br />
+                <br />
             </div>
         </div>
-        <br />
-        <br />
+        <div class="column"></div>
     </div>
 </body>

@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable} from "@angular/core";
 import { HttpClient, HttpResponse } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { IinfoPatient } from "./rechercher-dossier.model";
@@ -10,6 +10,6 @@ export class RechercherDossierService {
     constructor(private http: HttpClient) { }
 
     getByPatientId(id:string): Observable<HttpResponse<IinfoPatient[]>> {
-        return this.http.get<IinfoPatient[]>('http://localhost:7002/Patient/GetByPatientId?id='+id, { observe: 'response' });
+        return this.http.get<IinfoPatient[]>('http://localhost:7002/Patient/GetAll', { observe: 'response' });
     }
 }
