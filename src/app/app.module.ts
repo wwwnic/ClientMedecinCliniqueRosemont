@@ -11,6 +11,7 @@ import { PrescriptionComponent } from './dossierPatient/prescription/prescriptio
 import { InfoPatientComponent } from './dossierPatient/info-patient/info-patient.component';
 import { DossierComponent } from './dossierPatient/dossier/dossier.component';
 import { RechercherDossierComponent } from './rechercher-dossier/rechercher-dossier.component';
+import { AjouterPrescriptionComponent } from './dossierPatient/ajouter-prescription/ajouter-prescription.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RechercherDossierComponent } from './rechercher-dossier/rechercher-doss
     PrescriptionComponent,
     InfoPatientComponent,
     DossierComponent,
-    RechercherDossierComponent
+    RechercherDossierComponent,
+    AjouterPrescriptionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+<p>ajouter-prescription works!</p>
+<div> 
+    <form>
+        <div class="form-group row">
+          <label for="pres" class="col-4 col-form-label">Prescription</label> 
+          <div class="col-8">
+            <textarea [(ngModel)]="formPrescription" id="pres" name="pres" cols="40" rows="5" class="form-control"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="note" class="col-4 col-form-label">Note</label> 
+          <div class="col-8">
+            <textarea [(ngModel)]="formNote" id="note" name="note" cols="40" rows="5" class="form-control"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="reference" class="col-4 col-form-label">Référence</label> 
+          <div class="col-8">
+            <textarea [(ngModel)]="formRef" id="reference" name="reference" cols="40" rows="5" class="form-control"></textarea>
+          </div>
+        </div> 
+        <div class="form-group row">
+          <div class="offset-4 col-8">
+           <!-- <button (click)="ajouterInfo(formPrescription,formNote,formRef) class="btn btn-primary">Ajouter</button>-->
+          </div>
+        </div>
+      </form>

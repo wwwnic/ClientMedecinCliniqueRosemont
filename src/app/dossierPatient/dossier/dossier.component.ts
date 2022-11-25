@@ -7,7 +7,8 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./dossier.component.css']
 })
 export class DossierComponent {
-  id: number = 0;
+  id = 0;
+  afficherFormulaire = false;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -18,4 +19,9 @@ export class DossierComponent {
       }
     );
   }
+
+  voirFomulaire(): void {
+    this.afficherFormulaire = true;
+  }
+
 }
