@@ -6,15 +6,15 @@
         <div class="column">
             <div class="ybumpbox"></div>
             <div class="form-group row">
-                <label for="recherche" class="col-4 col-form-label">Rechercher dossier</label>
+                <label for="recherche" class="col-4 col-form-label">Rechercher un dossier par nom ou identifiant</label>
                 <div class="col-8">
-                    <input id="recherche" [(ngModel)]="rechercheInput" name="recherche" type="recherche" class="form-control" required="required" [formControl]="rechercheform">
-                </div>>
+                    <input id="recherche" [(ngModel)]="rechercheInput" name="recherche" type="recherche" class="form-control" required="required">
+                </div>
             </div>
             <br/>
             <div class="form-group row">
                 <div class="offset-4 col-8">
-                    <button type="button" (click)="rechercher()">Update Name</button>
+                    <button type="button" class="btn btn-primary" (click)="rechercher()">Rechercher</button>
                 </div>
             </div>
             <br/>
@@ -34,7 +34,7 @@
                         <div>
                             <h3>Date de naissance: {{patient.ddn}} ({{patient.age}})</h3>
                         </div>
-                        <button type="button" (click)="naviguerAuDossier(patient.id)">Update Name</button>
+                        <button type="button" class="btn btn-secondary" (click)="naviguerAuDossier(patient.id)">Voir le dossier</button>
                     </div>
                 </div>
                 <br />

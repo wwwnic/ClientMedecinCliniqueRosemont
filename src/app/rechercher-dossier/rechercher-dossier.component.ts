@@ -2,7 +2,6 @@ import { IinfoPatient } from "./rechercher-dossier.model";
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { RechercherDossierService } from './rechercher-dossier.service';
-import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +13,6 @@ export class RechercherDossierComponent {
 
   patients: IinfoPatient[] = []
   rechercheInput: string = ""
-  rechercheform = new FormControl('')
 
   constructor(protected router: Router, protected rechercherService: RechercherDossierService) {}
 
