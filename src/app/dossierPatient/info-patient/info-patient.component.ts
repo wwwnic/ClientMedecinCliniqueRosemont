@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IinfoPatient } from "./info-patient.model";
 import { infoPatient } from "./info-patient.model";
-import { HttpClient, HttpResponse } from "@angular/common/http";
+import { HttpResponse } from "@angular/common/http";
 import { InfoPatientService } from './info-patient.service';
 
 @Component({
@@ -14,8 +14,7 @@ export class InfoPatientComponent implements OnInit  {
 
   @Input() userID: number = 0;
 
-  constructor( protected infoPatientService: InfoPatientService) {
-  }
+  constructor( protected infoPatientService: InfoPatientService) {}
 
   ngOnInit(): void {
     this.getByPatientId();

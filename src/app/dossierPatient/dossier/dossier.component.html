@@ -1,15 +1,16 @@
+<br/>
 <div class="container">
     <div class="column">
         <app-info-patient [userID]="id">
         </app-info-patient>
     </div>
     <div class="column">
+        <button *ngIf="afficherFormulaire === false" type="button" class="floatright btn btn-secondary" (click)="voirFomulaire()">Ajouter des informations</button>
+        <app-ajouter-prescription (formulaireEstVisible)="cacherFormulaire($event)" [userID]="id" *ngIf="afficherFormulaire === true"></app-ajouter-prescription>
     </div>
     <div class="column">
         <app-prescription [userID]="id">
         </app-prescription>
         <br />
-        <!--<button ngIf="afficherFormulaire === false" type="button" class="btn btn-secondary" (click)="voirFomulaire">Voir le dossier</button>-->
-        <!--<app-ajouter-prescription [userID]="id" ngIf="afficherFormulaire === true"></app-ajouter-prescription>-->
     </div>
 </div>
