@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ModifierInfoPatientService } from './modifier-info-patient.service';
 import { Patient } from './modifier-info-patient.model';
 import { HttpResponse } from '@angular/common/http';
-
+import { InfoPatientService } from '../info-patient/info-patient.service'
 @Component({
   selector: 'app-modifier-info-patient',
   templateUrl: './modifier-info-patient.component.html',
@@ -12,7 +12,7 @@ export class ModifierInfoPatientComponent {
 
   @Output() formulaireEstVisible = new EventEmitter<boolean>();;
 
-  constructor(protected modifierInfoPatientService : ModifierInfoPatientService) { }
+  constructor(protected modifierInfoPatientService : ModifierInfoPatientService, protected infoPatService : InfoPatientService) { }
 
 
   cacherFormulaireDansDossier() {
@@ -32,7 +32,7 @@ export class ModifierInfoPatientComponent {
     let info = new Patient(this.userID,"","","","",this.dateDeNaissance,0,this.sexe,this.allergie);
     this.modifierInfoPatientService.AjouterInfoAuDossier(info)
       .subscribe((res: HttpResponse<any>) => {
-        
+        this.infoPatService.loadPatient(this.userID)
       })   
   }
 }

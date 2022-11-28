@@ -17,15 +17,8 @@ export class InfoPatientComponent implements OnInit  {
   constructor( protected infoPatientService: InfoPatientService) {}
 
   ngOnInit(): void {
-    this.getByPatientId();
-  }
-
-  getByPatientId() {
-    if (this.userID !== 0) {
-      this.infoPatientService.getById(this.userID)
-      .subscribe((res: HttpResponse<IinfoPatient>) => {
-        this.infoPatient = res.body ?? new infoPatient();
-      });
-    }
+    this.infoPatientService.getPatient(this.userID).subscribe(patient => {
+      this.infoPatient = patient
+    });
   }
 }
