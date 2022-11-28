@@ -10,7 +10,9 @@ import { Prescription } from '../prescription/prescription.model'
 export class DossierComponent {
   id = 0;
 
-  afficherFormulaire = false;
+  afficherFormulairePrescription = false;
+
+  afficherFormulaireInfoPatient = false;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -22,12 +24,22 @@ export class DossierComponent {
     );
   }
 
-  cacherFormulaire($event: boolean){
-    this.afficherFormulaire = $event
+  cacherFormulairePrescription($event: boolean){
+    this.afficherFormulairePrescription = $event
   }
 
-  voirFomulaire(): void {
-    this.afficherFormulaire = true;
+  cacherFormulaireInformationPatient($event: boolean){
+    this.afficherFormulaireInfoPatient = $event
   }
+
+  voirFomulairePrescription(): void {
+    this.afficherFormulairePrescription = true;
+  }
+
+  voirFormulaireAjouterInformationPatient(): void {
+    this.afficherFormulaireInfoPatient = true;
+  }
+
+
 
 }
