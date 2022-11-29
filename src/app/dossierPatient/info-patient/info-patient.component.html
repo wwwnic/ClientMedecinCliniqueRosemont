@@ -1,14 +1,26 @@
 <div>
+    <div *ngIf="infoPatient.prenom!.length + infoPatient.nom!.length>=1">
     <h2>Nom complet</h2>
     <p>{{infoPatient.prenom}} {{infoPatient.nom}}</p>
+    </div>
+    <div *ngIf="infoPatient.ddn!.length>=1">
     <h2>Date de naissance</h2>
     <p>{{infoPatient.ddn}} ({{infoPatient.age}})</p>
+    </div>
+    <div *ngIf="infoPatient != 0">
     <h2>Identifiant</h2>
     <p>{{infoPatient.id}}</p>
+    </div>
+    <div *ngIf="infoPatient.email!.length>=1">
     <h2>Courriel</h2>
     <p>{{infoPatient.email}}</p>
+    </div>
+    <div *ngIf="infoPatient.allergies!.length>=1">
     <h2>Allegies</h2>
     <p>{{infoPatient.allergies}}</p>
+    </div>
+    <div *ngIf="infoPatient.sexe!.length>=1">
     <h2>Sex</h2>
     <p>{{infoPatient.sexe}}</p>
+    </div>
 </div>

@@ -8,7 +8,7 @@
         <app-modifier-info-patient [userID]="id" *ngIf="afficherFormulaireInfoPatient === true" (formulaireEstVisible)="cacherFormulaireInformationPatient($event)"></app-modifier-info-patient>
     </div>
     <div class="column">
-        <button *ngIf="afficherFormulairePrescription === false" type="button" class="floatright btn btn-secondary" (click)="voirFomulairePrescription()">Ajouter des informations</button>
+        <button *ngIf="afficherFormulairePrescription === false" type="button" class="floatright btn btn-secondary" (click)="voirFomulairePrescription()">Ajouter un document</button>
         <app-ajouter-prescription [userID]="id" (formulaireEstVisible)="cacherFormulairePrescription($event)" [userID]="id" *ngIf="afficherFormulairePrescription === true"></app-ajouter-prescription>
     </div>
     <div class="column">

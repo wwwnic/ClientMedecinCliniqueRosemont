@@ -24,6 +24,9 @@
     <div class="row">
         <div class="column"></div>
         <div class="column">
+            <div *ngIf="patients.length==0">
+                <h3 class="center">Aucun resultat</h3>
+            </div>
             <div *ngFor="let patient of patients">
                 <div class="card">
                     <div class="card-header">
