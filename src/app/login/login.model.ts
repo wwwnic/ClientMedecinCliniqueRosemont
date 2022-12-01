@@ -1,11 +1,11 @@
 export interface ILogin {
-    username?: string;
-    pasword?: string;
+    id: number;
+    password: string;
 }
 
 export class Login implements ILogin {
     constructor(
-        public usename: string,
-        public pasword: string
+        public id: number,
+        public password: string
     ){}
 }

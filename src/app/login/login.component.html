@@ -3,29 +3,32 @@
         <div class="column"></div>
         <div class="column">
             <div class="ybumpbox"></div>
-            <form action="127.0.0.1:7002/login" type="post">
-                <div class="form-group row">
-                    <label for="username" class="col-4 col-form-label">Nom utilisateur</label>
-                    <div class="col-8">
-                        <input id="username" name="username" type="text" class="form-control" required="required">
-                    </div>
+            <div *ngIf="estInvalide == true">
+                <h3>Mdp invalide</h3>
+            </div>
+            <div class="form-group row">
+                <label for="username" class="col-4 col-form-label">Nom utilisateur</label>
+                <div class="col-8">
+                    <input [(ngModel)]="id" id="username" name="username" type="text" class="form-control"
+                        required="required">
                 </div>
-                <div class="form-group row">
-                    <label for="pw" class="col-4 col-form-label">Mot de passe</label>
-                    <div class="col-8">
-                        <input id="pw" name="pw" type="text" class="form-control" required="required">
-                    </div>
+            </div>
+            <div class="form-group row">
+                <label for="pw" class="col-4 col-form-label">Mot de passe</label>
+                <div class="col-8">
+                    <input [(ngModel)]="password" id="pw" name="pw" type="text" class="form-control"
+                        required="required">
                 </div>
-                <br/>
-                <div class="form-group row">
-                    <div class="offset-4 col-8">
-                        <button name="submit" type="submit" class="btn btn-primary">Se connecter</button>
-                        <br/>
-                        <br/>
-                        <a routerLink="/rechercherDossier">Rechercher dossier (sauter la connexion)</a>
-                    </div>
+            </div>
+            <br />
+            <div class="form-group row">
+                <div class="offset-4 col-8">
+                    <button (click)="connexion()" name="submit" type="submit" class="btn btn-primary">Se connecter</button>
+                    <br />
+                    <br />
+                    <a>Rechercher dossier (sauter la connexion)</a>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="column"></div>
     </div>
