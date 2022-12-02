@@ -2,7 +2,8 @@
     <div class="row">
         <div class="column"></div>
         <div class="column">
-            <div class="ybumpbox"></div>
+            <br/><br/><br/><br/>
+            <div>
             <div class="form-group row">
                 <label for="recherche" class="col-4 col-form-label">Rechercher un dossier par nom ou identifiant</label>
                 <div class="col-8">
@@ -17,33 +18,28 @@
                 </div>
             </div>
             <br />
-        </div>
-        <div class="column"></div>
-    </div>
-    <br /><br /><br /><br /><br /><br /><br />
-    <div class="row">
-        <div class="column"></div>
-        <div class="column">
-            <div *ngIf="patients.length==0">
-                <h3 class="center">Aucun resultat</h3>
-            </div>
-            <div *ngFor="let patient of patients">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>{{patient.prenom}} {{patient.nom}} ({{patient.id}})</h2>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <h3>Date de naissance: {{patient.ddn}} ({{patient.age}})</h3>
-                        </div>
-                        <button type="button" class="btn btn-secondary" (click)="naviguerAuDossier(patient.id)">Voir le
-                            dossier</button>
-                    </div>
+                <div *ngIf="patients.length==0">
+                    <h3 class="center">Aucun resultat</h3>
                 </div>
-                <br />
-                <br />
+                <div *ngFor="let patient of patients">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>{{patient.prenom}} {{patient.nom}} ({{patient.id}})</h2>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h3>Date de naissance: {{patient.ddn}} ({{patient.age}})</h3>
+                            </div>
+                            <button type="button" class="btn btn-secondary" (click)="naviguerAuDossier(patient.id)">Voir le
+                                dossier</button>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                </div>
             </div>
         </div>
         <div class="column"></div>
     </div>
+
 </body>

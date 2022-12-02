@@ -9,15 +9,15 @@
                 <h2>Document</h2>
             </div>
             <div class="card-body">
-                <div>
+                <div *ngIf="prescription.description != null && prescription.description.length > 0">
                     <h3>Prescription</h3>
                     <p>{{prescription.description}}</p>
                 </div>
-                <div>
+                <div *ngIf="prescription.notes != null && prescription.notes.length > 0">
                     <h3>Note</h3>
                     <p>{{prescription.notes}}</p>
                 </div>
-                <div>
+                <div *ngIf="prescription.references != null && prescription.references.length > 0">
                     <h3>Reference</h3>
                     <p>{{prescription.references}}</p>
                 </div>
