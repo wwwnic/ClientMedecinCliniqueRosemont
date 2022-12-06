@@ -9,6 +9,6 @@ export class AjouterPrescriptionService {
     constructor(private http: HttpClient) { }
 
     AjouterInfoAuDossier(info: IPrescription): Observable<any> {
-        return this.http.post<any>('http://localhost:7002/Prescription/Add', info)
+        return this.http.post<any>('http://localhost:7002/api/Prescription', info)
     }
 }

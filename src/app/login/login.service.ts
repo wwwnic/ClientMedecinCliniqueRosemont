@@ -28,6 +28,7 @@ export class LoginService {
     
 
     private login(id:number, password:string): Observable<HttpResponse<boolean>> {
-        return this.http.post<boolean>(`http://localhost:7002/Medecin/Login`, { 'id': id, 'password': password }, { observe: 'response' })
+        return this.http.post<boolean>(`http://localhost:7002/api/Authentification/Medecin
+        `, { 'id': id, 'password': password }, { observe: 'response' })
     }
 }

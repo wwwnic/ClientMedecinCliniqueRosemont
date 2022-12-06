@@ -12,10 +12,6 @@ export class PrescriptionService {
 
     constructor(private http: HttpClient) { }
 
-    getAll(): Observable<HttpResponse<IPrescription[]>> {
-        return this.http.get<IPrescription[]>('http://localhost:7002/Prescription/GetAll', { observe: 'response' });
-    }
-
     getPrescriptions(userID:number) {
         this.loadPrescription(userID);
         return this.prescriptions;
@@ -32,6 +28,7 @@ export class PrescriptionService {
     }
 
     getByPatientId(id:number): Observable<HttpResponse<IPrescription[]>> {
-        return this.http.get<IPrescription[]>(`http://localhost:7002/Prescription/GetByPatientId?id=${id}`, { observe: 'response' });
+        return this.http.get<IPrescription[]>(`http://localhost:7002/api/Prescription/ByPatientId/${id}`
+        , { observe: 'response' });
     }
 }

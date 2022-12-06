@@ -9,6 +9,6 @@ export class ModifierInfoPatientService {
     constructor(private http: HttpClient) { }
 
     AjouterInfoAuDossier(info: Ipatient): Observable<any> {
-        return this.http.patch<any>('http://localhost:7002/Patient/ModifyMedicalInfo', info)
+        return this.http.put<any>('http://localhost:7002/api/Patient/MedicalInfo', info)
     }
 }
