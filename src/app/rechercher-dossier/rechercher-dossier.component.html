@@ -18,9 +18,10 @@
                 </div>
             </div>
             <br />
-                <div *ngIf="patients.length==0">
+                <div *ngIf="patients.length==0 || patients[0].id == 0">
                     <h3 class="center">Aucun resultat</h3>
                 </div>
+                <div *ngIf="!(patients.length==0 || patients[0].id == 0)">
                 <div *ngFor="let patient of patients">
                     <div class="card">
                         <div class="card-header">
@@ -37,6 +38,7 @@
                     <br />
                     <br />
                 </div>
+            </div>
             </div>
         </div>
         <div class="column"></div>
