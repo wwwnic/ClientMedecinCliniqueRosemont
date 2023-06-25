@@ -4,7 +4,7 @@ Ce projet est le résultat d'un travail scolaire dont l'objectif était de crée
 
 ## Contexte
 
-Ce projet a été développé dans le cadre d'un cours universitaire visant à mettre en pratique les concepts d'API REST et de consommation d'API dans une application. L'application est destinée à être utilisée par les médecins pour faciliter la gestion de leurs prescriptions médicales.
+Ce projet a été développé dans le cadre d'un cours au cegep visant à mettre en pratique les concepts d'API REST et de consommation d'API dans une application. L'application est destinée à être utilisée par les médecins pour faciliter la gestion de leurs prescriptions médicales.
 
 ## Fonctionnalités
 
