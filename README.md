@@ -37,7 +37,7 @@ npm install
 4. Lancez le serveur :
 
 ```bash
-npm start
+ng serve
 ```
 
 Votre application devrait être accessible à `http://localhost:3000` ou à l'URL que vous avez configurée.
