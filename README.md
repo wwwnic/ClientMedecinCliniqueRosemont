@@ -42,28 +42,24 @@ Suivez les instructions ci-dessous pour configurer et exécuter ce projet sur vo
 1. Clonez le dépôt sur votre machine locale :
 
 ```bash
-git clone https://github.com/wwwnic/ClientMedecinCliniqueRosemont.git
+git clone https://github.com/wwwnic/ClientPatientCliniqueRosemont.git
 ```
 
 2. Accédez au répertoire du projet :
 
 ```bash
-cd ClientMedecinCliniqueRosemont
+cd ClientPatientCliniqueRosemont
 ```
 
-3. Installez les dépendances (Assurez-vous d'avoir Node.js et npm installés sur votre machine) :
+3. Assurez-vous d'avoir .NET Core ou .NET Framework installé sur votre machine. Vous pouvez le télécharger [ici](https://dotnet.microsoft.com/download) si nécessaire.
+
+4. Lancez l'application :
 
 ```bash
-npm install
+dotnet run
 ```
 
-4. Lancez le serveur :
-
-```bash
-ng serve
-```
-
-Votre application devrait être accessible à `http://localhost:3000` ou à l'URL que vous avez configurée.
+Votre application devrait être accessible à `http://localhost:5000` ou à l'URL que vous avez configurée.
 
 ## Utilisation
 
@@ -91,4 +87,4 @@ Si vous avez des questions, n'hésitez pas à me contacter.
 
 ## Auteur
 
-- [Nicolas Brunet](https://github.com/wwwnic)
+- [Nicolas Brunet](https://github.com/wwwnic), 
