@@ -12,6 +12,24 @@ Ce projet a été développé dans le cadre d'un cours au cegep visant à mettre
 - **Accès aux informations des patients** : Une fois le patient recherché, l'utilisateur peut accéder à toutes les informations associées au patient.
 - **Gestion des prescriptions** : Les utilisateurs peuvent visualiser les prescriptions existantes d'un patient et en ajouter de nouvelles.
 
+## Aperçu
+
+### Page d'information
+
+![Page Info](/angu/Page%20Info.jpg)
+
+### Page d'information avec formulaire
+
+![Formulaire](/angu/formulaire.jpg)
+
+### Page de connexion
+
+![Page de connexion](/angu/Page%20de%20connexion.jpg)
+
+### Page de recherche
+
+![Page de recherche](/angu/Page%20de%20recherche.jpg)
+
 ## Installation
 
 Suivez les instructions ci-dessous pour configurer et exécuter ce projet sur votre machine locale.
